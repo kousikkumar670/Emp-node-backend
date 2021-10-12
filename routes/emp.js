@@ -27,7 +27,7 @@ router.get("/:id",(req,res)=>{
     let response=constants.api_response;
     try{
         var id=req.params.id;
-        data.getDataById(null,id,function(data){
+        data.getDataById(null,id,function(err,data){
             response.status=constants.SUCCESS;
             response.data=data;
             res.send(response)
